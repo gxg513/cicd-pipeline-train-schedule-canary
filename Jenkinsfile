@@ -5,9 +5,11 @@ pipeline {
         DOCKER_IMAGE_NAME = "gxg513/train-schedule"
     }
     stages {
-        stage('test-ls-1') {
-              sh 'pwd'
-              sh 'ls -lah'
+        stage('test-ls') {
+            steps {
+                sh 'pwd'
+                sh 'ls -lah'
+            }
         }
         stage('Build') {
             steps {
